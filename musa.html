@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المصمم موسى الفهد</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #283919, #668F41);
+    color: white;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header-text {
+    max-width: 400px;
+    text-align: right;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: gold;
+}
+
+.show-works-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: white;
+    color: #283919;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.show-works-btn:hover {
+    background: gold;
+    color: white;
+}
+
+.gallery {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="شعاري.jpg" alt="شعاري">
+    <div class="header-text">
+        <h1>أهلاً<br>المصمم موسى الفهد</h1>
+    </div>
+</div>
+
+<div class="icons">
+    <a href="https://wa.me/967773375692" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/mousa_alfahd?igsh=cWo5dnRrczhidTNh" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/musa7723?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
+<button class="show-works-btn" onclick="showGallery()">عرض أعمالي</button>
+
+<section class="gallery" id="gallery">
+
+<div class="card">
+<img src="لوحة_فنية_1.jpg" alt="لوحة فنية 1">
+<p>لوحة فنية 1</p>
+</div>
+
+<div class="card">
+<img src="لوحة_فنية_2.jpg" alt="لوحة فنية 2">
+<p>لوحة فنية 2</p>
+</div>
+
+<div class="card">
+<img src="لوحة_فنية_3.jpg" alt="لوحة فنية 3">
+<p>لوحة فنية 3</p>
+</div>
+
+<div class="card">
+<img src="لوحة_فنية_4.jpg" alt="لوحة فنية 4">
+<p>لوحة فنية 4</p>
+</div>
+
+</section>
+
+<script>
+function showGallery() {
+    const gallery = document.getElementById('gallery');
+    if(gallery.style.display === 'grid'){
+        gallery.style.display = 'none';
+    } else {
+        gallery.style.display = 'grid';
+        window.scrollTo({ top: gallery.offsetTop, behavior: 'smooth' });
+    }
+}
+</script>
+
+</body>
+</html>
